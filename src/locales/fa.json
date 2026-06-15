@@ -1,0 +1,78 @@
+{
+  "navbar": {
+    "home": "خانه",
+    "about": "درباره ما",
+    "skills": "مهارت ها",
+    "projects": "پروژه ها",
+    "contact": "ارتباط با ما"
+  },
+
+  "hero": {
+    "greeting": "سلام خوبی",
+    "name": "محمد نظری",
+    "job": "برنامه نویس فرانت اند هستم",
+    "description": "توسعه دهنده فرانت‌اند با علاقه به React و طراحی رابط کاربری مدرن",
+    "downloadResume": "دانلود رزومه",
+    "viewProjects": "پروژه‌ها"
+  },
+"about": {
+    "title": "درباره من",
+    "description1": "سلام! محمد نظری هستم. طراح سایت های خبری، شرکتی، portfolio، برنامه نویس فرانت اند و طراح وب اپلیکیشن با کدنویسی تمیز و طراحی مدرن.",
+    "description2": "متولد سال 1385 هستم و از سال 1403 وارد برنامه نویسی فرانت اند شدم. تا الان مهارت های فرانت اند را تکمیل کرده ام و فردی سخت کوش با روحیه کار تیمی هستم."
+  },
+
+  "skills":{
+    "title":"مهارت ها"
+  },
+
+  "projects": {
+    "title": "پروژه ها",
+
+    "project1": {
+      "type": "وبسایت",
+      "title": "وبسایت خدماتی",
+      "technologyTitle": "تکنولوژی استفاده شده",
+      "technologies": "HTML, CSS, JavaScript, jQuery, Bootstrap"
+    },
+
+    "project2": {
+      "type": "وبسایت",
+      "title": "پنل ادمین",
+      "technologyTitle": "تکنولوژی استفاده شده",
+      "technologies": "HTML, CSS, JavaScript, React, Bootstrap"
+    },
+
+    "project3": {
+      "type": "وبسایت",
+      "title": "اپ وظایف",
+      "technologyTitle": "تکنولوژی استفاده شده",
+      "technologies": "HTML, CSS, JavaScript, React, Bootstrap"
+    },
+
+    "project4": {
+      "type": "وبسایت",
+      "title": "اپ هواشناسی",
+      "technologyTitle": "تکنولوژی استفاده شده",
+      "technologies": "HTML, CSS, JavaScript, React, Bootstrap"
+    },
+
+    "project5": {
+      "type": "وبسایت",
+      "title": "وبسایت پورتفولیو",
+      "technologyTitle": "تکنولوژی استفاده شده",
+      "technologies": "HTML, CSS, JavaScript, React, Bootstrap"
+    }
+  },
+
+  "contact": {
+    "title": "ارتباط با من",
+    "phone": "تلفن",
+    "location": "لوکیشن",
+    "socialMedia": "سوشال مدیا"
+  },
+
+  "language": {
+    "fa": "فارسی",
+    "en": "English"
+  }
+}

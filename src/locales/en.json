@@ -1,0 +1,77 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact Me"
+  },
+
+  "hero": {
+    "greeting": "Hello there",
+    "name": "I'am Mohammad Nazari",
+    "job": "I'm a Front-End Developer.",
+    "description": "Front-End Developer passionate about React and modern UI design",
+    "downloadResume": "Download Resume",
+    "viewProjects": "Projects"
+  },
+  "about": {
+    "title": "About Me",
+    "description1": "Hello! I'm Mohammad Nazari, a Front-End Developer specializing in news websites, corporate websites, portfolio websites, and modern web applications with clean code and modern UI design.",
+    "description2": "I was born in 2006 and started my Front-End journey in 2024. Since then, I have been improving my skills continuously and consider myself a hardworking person with strong teamwork abilities."
+  },
+   "skills":{
+    "title":"skills"
+  },
+
+  "projects": {
+    "title": "Projects",
+
+    "project1": {
+      "type": "Website",
+      "title": "Service Website",
+      "technologyTitle": "Technologies Used",
+      "technologies": "HTML, CSS, JavaScript, jQuery, Bootstrap"
+    },
+
+    "project2": {
+      "type": "Website",
+      "title": "Admin Dashboard",
+      "technologyTitle": "Technologies Used",
+      "technologies": "HTML, CSS, JavaScript, React, Bootstrap"
+    },
+
+    "project3": {
+      "type": "Website",
+      "title": "Task App",
+      "technologyTitle": "Technologies Used",
+      "technologies": "HTML, CSS, JavaScript, React, Bootstrap"
+    },
+
+    "project4": {
+      "type": "Website",
+      "title": "Weather App",
+      "technologyTitle": "Technologies Used",
+      "technologies": "HTML, CSS, JavaScript, React, Bootstrap"
+    },
+
+    "project5": {
+      "type": "Website",
+      "title": "Portfolio Website",
+      "technologyTitle": "Technologies Used",
+      "technologies": "HTML, CSS, JavaScript, React, Bootstrap"
+    }
+  },
+
+  "contact": {
+    "title": "Contact Me",
+    "phone": "Phone",
+    "location": "Location",
+    "socialMedia": "Social Media"
+  },
+
+  "language": {
+    "fa": "فارسی",
+    "en": "English"
+  }
+}
