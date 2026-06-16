@@ -3,10 +3,9 @@ import { FaBars } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
+const Navbar = ({ menu, setMenu, handelChangeLang }) => {
   const [innerWidthPJ, setInnerWidthPJ] = useState(window.innerWidth);
-  const {i18n, t} = useTranslation()
-
+  const { i18n, t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,7 +41,10 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
               <h1 className="title-part fs-5">Mohammad-web-dev</h1>
             </div>
           </div>
-          <div onClick={handelDeleteMenu} className={`bg ${menu ? "active" : ""}`}>
+          <div
+            onClick={handelDeleteMenu}
+            className={`bg ${menu ? "active" : ""}`}
+          >
             <div className="navbar">
               <div className="right-part">
                 <ul className="list">
@@ -63,7 +65,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
                       }
                       to="/about"
                     >
-                        {t("navbar.about")}
+                      {t("navbar.about")}
                     </NavLink>
                   </li>
                   <li className="list-item">
@@ -73,7 +75,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
                       }
                       to="/skill"
                     >
-                        {t("navbar.skills")}
+                      {t("navbar.skills")}
                     </NavLink>
                   </li>
                   <li className="list-item">
@@ -83,7 +85,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
                       }
                       to="/project"
                     >
-                        {t("navbar.projects")}
+                      {t("navbar.projects")}
                     </NavLink>
                   </li>
                   <li className="list-item">
@@ -93,7 +95,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
                       }
                       to="/contact"
                     >
-                        {t("navbar.contact")}
+                      {t("navbar.contact")}
                     </NavLink>
                   </li>
                 </ul>
@@ -104,7 +106,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
                   onClick={handelChangeLang}
                   className="button-chang-ln px-3 px-xl-4"
                 >
-          {i18n.language === "en" ? "فارسی" : "English"}
+                  {i18n.language === "en" ? "فارسی" : "English"}
                 </button>
               </div>
             </div>
@@ -121,7 +123,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
                   }
                   to="/"
                 >
-                        {t("navbar.home")}
+                  {t("navbar.home")}
                 </NavLink>
               </li>
               <li className="list-item">
@@ -131,7 +133,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
                   }
                   to="/about"
                 >
-                        {t("navbar.about")}
+                  {t("navbar.about")}
                 </NavLink>
               </li>
               <li className="list-item">
@@ -141,7 +143,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
                   }
                   to="/skill"
                 >
-                        {t("navbar.skills")}
+                  {t("navbar.skills")}
                 </NavLink>
               </li>
               <li className="list-item">
@@ -151,7 +153,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
                   }
                   to="/project"
                 >
-                        {t("navbar.projects")}
+                  {t("navbar.projects")}
                 </NavLink>
               </li>
               <li className="list-item">
@@ -161,7 +163,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
                   }
                   to="/contact"
                 >
-                        {t("navbar.contact")}
+                  {t("navbar.contact")}
                 </NavLink>
               </li>
             </ul>
@@ -175,6 +177,7 @@ const Navbar = ({ menu, setMenu ,handelChangeLang }) => {
               {i18n.language === "fa" ? "English" : "فارسی"}
             </button>
           </div>
+          <h1 className="title-part fs-5">Mohammad-web-dev</h1>
         </div>
       )}
     </>

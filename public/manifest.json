@@ -1,0 +1,8 @@
+{
+  "name": "Mohammad Nazari Portfolio",
+  "short_name": "Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ab81ef"
+}

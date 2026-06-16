@@ -684,3 +684,8 @@ content-box {
  
   }
 }
+
+
+.projects-section{
+  background: inherit !important;
+}

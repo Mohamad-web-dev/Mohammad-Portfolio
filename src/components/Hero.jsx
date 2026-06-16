@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import profileImg from "../assets/image/profile.png";
+import profileImg from "../assets/image/profile1.webp";
 import {
   FaInstagram,
   FaWhatsapp,
