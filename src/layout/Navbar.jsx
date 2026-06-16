@@ -115,7 +115,7 @@ const Navbar = ({ menu, setMenu, handelChangeLang }) => {
       ) : (
         <div className="navbar">
           <div className="right-part">
-            <ul className="list">
+            <ul className="list ">
               <li className="list-item">
                 <NavLink
                   className={({ isActive }) =>
@@ -177,7 +177,7 @@ const Navbar = ({ menu, setMenu, handelChangeLang }) => {
               {i18n.language === "fa" ? "English" : "فارسی"}
             </button>
           </div>
-          <h1 className="title-part fs-5">Mohammad-web-dev</h1>
+          <h1 className="title-part">MohammadWebDev</h1>
         </div>
       )}
     </>

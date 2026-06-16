@@ -480,6 +480,10 @@ a {
   animation: profile 1s ease forwards;
   opacity: 0;
 }
+ .title-part {
+    font-family: bonjour;
+    font-size: 18px;
+  }
 @keyframes profile {
   0% {
     transform: translateY(-200%);
@@ -517,6 +521,8 @@ content-box {
 .title-contact {
   color: rgba(171, 129, 239, 0.95);
 }
+
+
 
 @media (max-width: 992px) {
   .navbar {
@@ -563,13 +569,17 @@ content-box {
     width: 90vw;
     height: 30px;
     justify-content: center;
+    align-items: center;
   }
   .navbar .right-part {
-    width: 70%;
+    width: unset;
   }
   .navbar .right-part ul {
     flex-direction: row;
-    width: 100;
+    gap: 25px;
+  }
+  .navbar .right-part ul li {
+    width: max-content;
   }
   .hero {
     flex-direction: column;
@@ -663,9 +673,7 @@ content-box {
     justify-content: space-around;
     z-index: 999;
   }
-  .title-part {
-    font-family: bonjour;
-  }
+ 
   .hero p.text-profile , .hero .introduction .buttons .button-hero:first-child, .hero .introduction .buttons .button-hero:last-child{
     font-size: 12px;
   }
@@ -682,6 +690,9 @@ content-box {
     transform: translate(0%) ;
     opacity: 1;
  
+  }
+  .hero .name-part{
+    flex-direction: column !important;
   }
 }
 
