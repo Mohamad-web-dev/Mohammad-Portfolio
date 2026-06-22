@@ -47,7 +47,7 @@ const Hero = () => {
         <div className="buttons d-flex flex-column ">
           <a
             className="button-hero px-3 rounded"
-            href=".../public/resume.pdf"
+            href="/resume.pdf"
             download="Mohammad_Nazari_CV.pdf"
           >
             {t("hero.downloadResume")}

@@ -1,10 +1,8 @@
 import { useState } from "react";
-import ShowImg from "./ShowImg";
 import { useTranslation } from "react-i18next";
 
 const Project = () => {
-  const [activeImg, setActiveImg] = useState("");
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   const ProjectData = [
     {
@@ -13,6 +11,7 @@ const Project = () => {
       title: t("projects.project1.title"),
       tech: t("projects.project1.technologies"),
       image: "../images/1.webp",
+      urlSite:"#"
     },
     {
       number: "02",
@@ -20,6 +19,7 @@ const Project = () => {
       title: t("projects.project2.title"),
       tech: t("projects.project2.technologies"),
       image: "../images/2.webp",
+      urlSite:"#"
     },
     {
       number: "03",
@@ -27,6 +27,7 @@ const Project = () => {
       title: t("projects.project3.title"),
       tech: t("projects.project3.technologies"),
       image: "../images/3.webp",
+      urlSite:"#"
     },
     {
       number: "04",
@@ -34,6 +35,7 @@ const Project = () => {
       title: t("projects.project4.title"),
       tech: t("projects.project4.technologies"),
       image: "../images/4.webp",
+      urlSite:"https://mohammadweather.vercel.app/"
     },
     {
       number: "05",
@@ -41,12 +43,11 @@ const Project = () => {
       title: t("projects.project5.title"),
       tech: t("projects.project5.technologies"),
       image: "../images/5.webp",
+      urlSite:"https://mohammadwebdev.vercel.app/"
     },
   ];
 
-  const handelShowImg = (image) => {
-    setActiveImg(image);
-  };
+
 
   return (
     <section className="projects-section py-5">
@@ -69,27 +70,23 @@ const Project = () => {
                 <h2 className="title mt-3">{item.title}</h2>
 
                 <p className="text-secondary mt-4">
-                  
-                 
-                    {t("projects.project1.technologyTitle")}                  
-                  </p>
+                  {t("projects.project1.technologyTitle")}
+                </p>
 
                 <p className="tech">{item.tech}</p>
 
                 <div className="image-box">
+                  <a href={item.urlSite} className="link-site-image"  target="_blank" >
+
                   <img
                     src={item.image}
-                    onClick={() => handelShowImg(item.image)}
                     className="img-fluid object-cover"
-                    alt=""
+                    alt="image from website"
                   />
+                  </a>
                 </div>
               </div>
-              {ShowImg === "" ? (
-                <ShowImg img={item.image} setActiveImg={setActiveImg} />
-              ) : (
-                ""
-              )}
+
             </div>
           ))}
         </div>
