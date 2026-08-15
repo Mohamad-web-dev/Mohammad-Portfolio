@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://arman.dev/sitemap.xml
+Sitemap: https://mohammadwebdev.vercel.app/sitemap.xml
