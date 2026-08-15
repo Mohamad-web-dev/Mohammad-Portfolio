@@ -1,0 +1,51 @@
+/* Only hide the native cursor once the follower is actually active
+   (desktop, fine pointer, motion not reduced) — see CursorFollower.jsx */
+html.has-custom-cursor,
+html.has-custom-cursor a,
+html.has-custom-cursor button,
+html.has-custom-cursor [role="button"] {
+  cursor: none;
+}
+
+.cursor-follower {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.cursor-follower--visible {
+  opacity: 1;
+}
+
+.cursor-follower__dot,
+.cursor-follower__ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.cursor-follower__dot {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  background: var(--primary);
+}
+
+.cursor-follower__ring {
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  border: 1.5px solid var(--primary-2);
+}
+
+@media (max-width: 991px) {
+  .cursor-follower {
+    display: none;
+  }
+}

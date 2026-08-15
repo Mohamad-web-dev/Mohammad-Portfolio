@@ -1,0 +1,56 @@
+:root {
+  /* ---- Color: near-black workshop base + violet→magenta signature gradient ---- */
+  --bg: #08070d;
+  --bg-soft: #0e0c16;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-strong: rgba(255, 255, 255, 0.07);
+  --surface-border: rgba(255, 255, 255, 0.09);
+
+  --text: #f3f1f8;
+  --text-muted: #a29dbd;
+  --text-faint: #6b6680;
+
+  --primary: #8b5cf6;
+  --primary-2: #ec4899;
+  --accent: #22d3ee;
+  --success: #34d399;
+
+  --gradient-signature: linear-gradient(120deg, #7c3aed 0%, #c026d3 55%, #ec4899 100%);
+  --gradient-soft: linear-gradient(160deg, rgba(124, 58, 237, 0.16), rgba(236, 72, 153, 0.08));
+  --gradient-text: linear-gradient(120deg, #a78bfa 0%, #f472b6 100%);
+
+  --glow-primary: 0 0 60px rgba(139, 92, 246, 0.28);
+  --glow-pink: 0 0 60px rgba(236, 72, 153, 0.22);
+  --shadow-card: 0 12px 40px -12px rgba(0, 0, 0, 0.55);
+  --shadow-card-hover: 0 20px 55px -15px rgba(124, 58, 237, 0.35);
+
+  /* ---- Type ---- */
+  --font-display: "Vazirmatn Variable", "Vazirmatn", sans-serif;
+  --font-body: "Vazirmatn Variable", "Vazirmatn", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* ---- Radii / spacing rhythm ---- */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --section-y: clamp(4rem, 8vw, 7rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light theme override — flips the surface, keeps the signature gradient */
+:root[data-theme="light"] {
+  --bg: #f7f6fb;
+  --bg-soft: #efedf7;
+  --surface: rgba(20, 12, 40, 0.04);
+  --surface-strong: rgba(20, 12, 40, 0.07);
+  --surface-border: rgba(20, 12, 40, 0.1);
+
+  --text: #1c1730;
+  --text-muted: #5c5674;
+  --text-faint: #8b85a3;
+
+  --shadow-card: 0 12px 32px -14px rgba(90, 60, 160, 0.25);
+}
