@@ -104,6 +104,6 @@ export const skillGroups = [
       en: "Team collaboration, version control, and reliable deployment.",
     },
     level: 55,
-    items: ["Git & GitHub", "Ai", "Figma", "Testing", "Performance Tuning"],
+    items: ["Git & GitHub", "AI", "Restful api" , "Figma", "Testing", "Performance"],
   },
 ];
