@@ -82,6 +82,8 @@ export const skillGroups = [
       "React.js",
       "Next.js",
       "TypeScript",
+      "ES6",
+      "Javascript",
       "Bootstrap 5",
       "Tailwind CSS",
       "Html",
