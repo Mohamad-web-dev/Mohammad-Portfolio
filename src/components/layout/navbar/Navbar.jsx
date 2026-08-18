@@ -38,7 +38,7 @@ export default function Navbar() {
           setActiveId(visible[0].target.id);
         }
       },
-      { rootMargin: "-35% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
+      { rootMargin: "-35% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -53,6 +53,46 @@ export default function Navbar() {
   return (
     <header className={`site-nav ${scrolled ? "site-nav--scrolled" : ""}`}>
       <div className="container-page site-nav__inner">
+        <div className="site-nav__brand">
+          <a
+            href="#home"
+            className="site-nav__brand-link"
+            onClick={(event) => {
+              event.preventDefault();
+              handleNavClick("home");
+            }}
+          >
+            <span className="site-nav__brand-name">{siteConfig.handle}</span>
+            <span className="site-nav__brand-icon">MD</span>
+          </a>
+          <button
+            type="button"
+            className="icon-btn site-nav__burger"
+            aria-label="Toggle menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <FiX size={18} /> : <FiMenu size={18} />}
+          </button>
+        </div>
+
+        <nav
+          className={`site-nav__links ${open ? "site-nav__links--open" : ""}`}
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className={`site-nav__link ${activeId === link.id ? "site-nav__link--active" : ""}`}
+              onClick={(event) => {
+                event.preventDefault();
+                handleNavClick(link.id);
+              }}
+            >
+              {link.live && <span className="status-dot status-dot--live" />}
+              {pick(link.label)}
+            </a>
+          ))}
+        </nav>
         <div className="site-nav__utils">
           <button
             type="button"
@@ -70,47 +110,6 @@ export default function Navbar() {
             lang={lang === "fa" ? "en" : "fa"}
           >
             {t("common.langSwitchTo")}
-          </button>
-        </div>
-
-        <nav className={`site-nav__links ${open ? "site-nav__links--open" : ""}`}>
-          {navLinks.map((link) => (
-            <a
-              key={link.id}
-              href={`#${link.id}`}
-              className={`site-nav__link ${activeId === link.id ? "site-nav__link--active" : ""}`}
-              onClick={(event) => {
-                event.preventDefault();
-                handleNavClick(link.id);
-              }}
-            >
-              {link.live && <span className="status-dot status-dot--live" />}
-              {pick(link.label)}
-            </a>
-          ))}
-        </nav>
-
-        <div className="site-nav__brand">
-          <a
-            href="#home"
-            className="site-nav__brand-link"
-            onClick={(event) => {
-              event.preventDefault();
-              handleNavClick("home");
-            }}
-          >
-            <span className="site-nav__brand-name">{siteConfig.handle}</span>
-            <span className="site-nav__brand-icon">
-              MD
-            </span>
-          </a>
-          <button
-            type="button"
-            className="icon-btn site-nav__burger"
-            aria-label="Toggle menu"
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? <FiX size={18} /> : <FiMenu size={18} />}
           </button>
         </div>
       </div>

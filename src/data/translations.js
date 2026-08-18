@@ -23,15 +23,7 @@ export const translations = {
     eyebrow: { fa: "ابزارها", en: "Toolbox" },
     title: { fa: "تکنولوژی‌ها", en: "Technologies" },
   },
-  shop: {
-    eyebrow: { fa: "فروشگاه", en: "Shop" },
-    title: { fa: "فروشگاه", en: "Shop" },
-    kicker: {
-      fa: "سورس کد کامل چند پروژه‌ی واقعی — آماده برای یادگیری، سفارشی‌سازی یا استفاده مستقیم در کسب‌وکار شما.",
-      en: "Full source code for real-world projects — ready to learn from, customize, or drop straight into your own business.",
-    },
-    cta: { fa: "دریافت سورس کد", en: "Get the Source" },
-  },
+
   projects: {
     eyebrow: { fa: "کارها", en: "Work" },
     title: { fa: "پروژه‌ها و دموها", en: "Projects & Demos" },

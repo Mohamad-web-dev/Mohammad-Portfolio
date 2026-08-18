@@ -98,3 +98,7 @@
   color: var(--success);
   font-size: 0.88rem;
 }
+.contact-form_danger {
+  color: red;
+  font-size: 0.82rem;
+}

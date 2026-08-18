@@ -6,12 +6,39 @@ import Reveal from "../common/Reveal";
 import { siteConfig } from "../../data/siteConfig";
 import { useLanguage } from "../../context/LanguageContext";
 import "./contactSection.css";
+import { ErrorMessage, FastField, Form, Formik } from "formik";
+import Input from "../common/Input";
 
 const initialForm = { name: "", email: "", phone: "", message: "" };
 
+const validation = (values) => {
+  const errors = {};
+
+  if (!values.name.trim()) {
+    errors.name = "نام الزامی است";
+  } else if (!/^[a-zA-Z\u0600-\u06FF\s]+$/.test(values.name)) {
+    errors.name = "نام فقط باید شامل حروف فارسی و انگلیسی باشد";
+  }
+
+  if (!values.email.trim()) {
+    errors.email = "ایمیل الزامی است";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+    errors.email = "ایمیل معتبر نیست";
+  }
+
+  if (values.phone && !/^09\d{9}$/.test(values.phone)) {
+    errors.phone = "شماره موبایل معتبر نیست";
+  }
+
+  if (!values.message.trim()) {
+    errors.message = "پیام الزامی است";
+  }
+
+  return errors;
+};
+
 export default function ContactSection() {
-  const { pick, t , dir} = useLanguage();
-  const [form, setForm] = useState(initialForm);
+  const { pick, t, dir } = useLanguage();
   const [status, setStatus] = useState("idle"); // idle | sent
 
   const contactPoints = [
@@ -32,18 +59,33 @@ export default function ContactSection() {
     },
   ];
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  };
+  const handleSubmit = async (values, { resetForm }) => {
+    setStatus("sending");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (!form.name || !form.email || !form.message) return;
-    // Front-end only demo: wire this up to your API / email service.
-    setStatus("sent");
-    setForm(initialForm);
-    setTimeout(() => setStatus("idle"), 3500);
+    try {
+      const response = await fetch("https://formspree.io/f/myegblpw", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error("ارسال فرم ناموفق بود");
+      }
+
+      setStatus("sent");
+      resetForm();
+
+      setTimeout(() => {
+        setStatus("idle");
+      }, 3500);
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -70,82 +112,69 @@ export default function ContactSection() {
             ))}
           </Reveal>
 
-          <Reveal
-            as="form"
-            direction="start"
-            className="contact-form glass-card"
+          <Formik
+            initialValues={initialForm}
             onSubmit={handleSubmit}
-            noValidate
+            validate={validation}
           >
-            <div className="row g-3">
-              <div className="col-md-6">
-                <label className="contact-form__label" htmlFor="name">
-                  {t("contact.nameLabel")}
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  className="contact-form__input"
-                  placeholder={t("contact.namePlaceholder")}
-                  value={form.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="col-md-6">
-                <label className="contact-form__label" htmlFor="email">
-                  {t("contact.emailLabel")}
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="contact-form__input"
-                  placeholder={t("contact.emailPlaceholder")}
-                  value={form.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-              <div className="col-12">
-                <label className="contact-form__label" htmlFor="phone">
-                  {t("contact.phoneLabel")}
-                </label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  className="contact-form__input"
-                  placeholder={t("contact.phonePlaceholder")}
-                  value={form.phone}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="col-12">
-                <label className="contact-form__label" htmlFor="message">
-                  {t("contact.messageLabel")}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  className="contact-form__input contact-form__textarea"
-                  placeholder={t("contact.messagePlaceholder")}
-                  value={form.message}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
+            <Reveal direction="start" className="contact-form glass-card">
+              <Form>
+                <div className="row g-3">
+                  <div className="col-md-6">
+                    <Input
+                      name={"name"}
+                      label={t("contact.nameLabel")}
+                      placeholder={t("contact.namePlaceholder")}
+                      component={"input"}
+                      type={"text"}
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <Input
+                      name={"email"}
+                      label={t("contact.emailLabel")}
+                      placeholder={t("contact.emailPlaceholder")}
+                      component={"input"}
+                      type={"email"}
+                    />
+                  </div>
+                  <div className="col-12">
+                    <Input
+                      name={"phone"}
+                      label={t("contact.phoneLabel")}
+                      placeholder={t("contact.phonePlaceholder")}
+                      component={"input"}
+                      type={"tel"}
+                    />
+                  </div>
+                  <div className="col-12">
+                    <Input
+                      name={"message"}
+                      label={t("contact.messageLabel")}
+                      placeholder={t("contact.messagePlaceholder")}
+                      component={"textarea"}
+                    />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  className="btn-gradient contact-form__submit"
+                  disabled={status === "sending"}
+                >
+                  {status === "sending"
+                    ? "در حال ارسال..."
+                    : t("contact.submit")}
 
-            <button type="submit" className="btn-gradient contact-form__submit">
-              {t("contact.submit")} <FiSend size={15} />
-            </button>
-
-            {status === "sent" && (
-              <p className="contact-form__success">{t("contact.success")}</p>
-            )}
-          </Reveal>
+                  {status !== "sending" && <FiSend size={15} />}
+                </button>
+                {status === "sent" && (
+                  <p className="contact-form__success">
+                    {t("contact.success")}
+                  </p>
+                )}
+              </Form>
+            </Reveal>
+          </Formik>
         </div>
       </div>
     </section>
