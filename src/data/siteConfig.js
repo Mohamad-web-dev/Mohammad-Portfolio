@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: { fa: "محمد نظری", en: "Mohammad Nazari" },
   handle: "Mohammad.DEV",
-  role: { fa: "توسعه‌دهنده فرانت‌اند", en: "Frontend Developer" },
+  role: { fa: "توسعه‌دهنده وبسایت", en: "website Developer" },
   location: { fa: "تهران، ایران", en: "Tehran, Iran" },
   availability: { fa: "در دسترس برای همکاری", en: "Available for work" },
   bio: {

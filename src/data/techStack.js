@@ -96,7 +96,7 @@ export const skillGroups = [
       fa: "ساخت سایت با وردپرس و المنتور به صورت پیشرفته",
       en: "Advanced Website Creation with WordPress and Elementor",
     },
-    level: 45,
+    level: 95,
     items: ["Wordpress", "Elementor", "Woocomerce", "Rank Math Seo", "..."],
   },
   {
@@ -105,7 +105,7 @@ export const skillGroups = [
       fa: "همکاری تیمی، کنترل نسخه و استقرار مطمئن.",
       en: "Team collaboration, version control, and reliable deployment.",
     },
-    level: 55,
+    level: 85,
     items: ["Git & GitHub", "AI", "Restful api" , "Figma", "Testing", "Performance"],
   },
 ];
