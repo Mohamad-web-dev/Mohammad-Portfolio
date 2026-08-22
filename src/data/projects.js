@@ -1,8 +1,26 @@
 import weatherImage from "../assets/projectImage/weather-app.webp";
 import panelImage from "../assets/projectImage/panel-admin.webp";
 import todoImage from "../assets/projectImage/todo-app.webp";
+import stoneP from "../assets/projectImage/stoneP.webp";
 
 export const projects = [
+  {
+    id: "nazari-stone",
+    title: { fa: "نظری استون", en: "nazari stone" },
+    description: {
+      fa:"Nazari Stone مجموعه‌ای فعال در زمینه تأمین و عرضه سنگ‌های ساختمانی با تمرکز بر کیفیت، تنوع و ارائه محصولات مناسب برای پروژه‌های معماری و ساختمانی است.",
+      en: "Nazari Stone is a company active in the supply and distribution of building stones, focusing on quality, variety, and the provision of products suitable for architectural and construction projects.",
+    },
+    tags: [
+      "wordpress",
+      "elementor",
+      "rankmath seo",
+      "wordfence",
+    ],
+    demoUrl: "#",
+    accent: "from-violet",
+    imageUrl: stoneP,
+  },
   {
     id: "admin-dashboard",
     title: { fa: "داشبورد ادمین React", en: "React Admin Dashboard" },
@@ -62,6 +80,21 @@ export const projects = [
 ];
 
 export const experience = [
+  {
+    id: "nazari stone",
+    company: "nazari stone",
+    companyEn: "panel admin",
+    role: { fa: "وردپرس کار", en: "WordPress" },
+    period: { fa: "مرداد ۱۴۰۵ – تا کنون", en: "August 2026 – persent" },
+    status: { fa: "درحال توسعه", en: "developing" },
+    statusType: "live",
+    category: "web developer",
+    description: {
+      fa: "توسعه وب سایت با استفاده از wordpress و elementor طراحی رابط کاربری مدرن و کاربر پسند نمایش تمام ویژگی ها و جزئیات محصول سئو شده توست افزونه رنک مث سئو و کاملا ریسپانسیو و واکنشگرا ",
+      en: "Website development using WordPress and Elementor; modern, user-friendly UI design; showcasing all product features and details; SEO-optimized via the Rank Math plugin; and fully responsive.",
+    },
+    stack: ["wordpress", "html", "css", "elementor" , "rankmath seo" , "js" ],
+  },
   {
     id: "panel-admin",
     company: "panel admin",
