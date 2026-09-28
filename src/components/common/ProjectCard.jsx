@@ -10,7 +10,7 @@ export default function ProjectCard({ project }) {
     <article className={`project-card glass-card glass-card--hover project-card--${project.accent}`}>
       <div className="project-card__media">
         {/* <span className="project-card__glyph">{title.charAt(0)}</span> */}
-        <img width={"100%"} height={"200px"} style={{objectFit:"cover"}} src={project.imageUrl} alt="weather-app" />
+        <img width={"100%"} height={"200px"} style={{objectFit:"cover" , objectPosition:"top"}} src={project.imageUrl} alt="weather-app" />
       </div>
 
       <div className="project-card__body">

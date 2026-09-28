@@ -5,7 +5,7 @@ import AnchorLink from "../common/AnchorLink";
 import { siteConfig } from "../../data/siteConfig";
 import { useLanguage } from "../../context/LanguageContext";
 import "./hero.css";
-import image from "../../assets/img/1profile.webp";
+import image from "../../assets/img/mohammadnazari.webp";
 
 const ease = [0.16, 1, 0.3, 1];
 
