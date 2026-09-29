@@ -35,32 +35,42 @@ export const content = {
     shop: {
       eyebrow: "فروشگاه",
       title: "فروشگاه",
-      kicker: "سورس کد کامل چند پروژه‌ی واقعی — آماده برای یادگیری، سفارشی‌سازی یا استفاده مستقیم در کسب‌وکار شما.",
+      kicker:
+        "سورس کد کامل چند پروژه‌ی واقعی — آماده برای یادگیری، سفارشی‌سازی یا استفاده مستقیم در کسب‌وکار شما.",
       cta: "دریافت سورس کد",
     },
     projects: {
       eyebrow: "کارها",
       title: "پروژه‌ها و دموها",
-      kicker: "گزیده‌ای از پروژه‌های تمرینی، دموها و آزمایش‌های رابط کاربری که برای یادگیری و نمایش مهارت‌هایم ساخته‌ام.",
+      kicker:
+        "گزیده‌ای از پروژه‌های تمرینی، دموها و آزمایش‌های رابط کاربری که برای یادگیری و نمایش مهارت‌هایم ساخته‌ام.",
       viewDemo: "پیش‌نمایش آنلاین",
     },
     experience: {
       eyebrow: "مسیر حرفه‌ای",
       title: "سوابق کاری",
-      kicker: "خلاصه‌ای از همکاری‌های اخیرم به‌صورت تیمی و فریلنس، به‌ترتیب از جدیدترین.",
+      kicker:
+        "خلاصه‌ای از همکاری‌های اخیرم به‌صورت تیمی و فریلنس، به‌ترتیب از جدیدترین.",
       tabs: { all: "همه", frontend: "FRONT-END", backend: "BACK-END" },
     },
     skills: {
       eyebrow: "مهارت‌ها",
       title: "توانمندی‌های فنی",
-      kicker: "حوزه‌هایی که در آن‌ها فعالانه کار می‌کنم، به همراه سطح تجربه‌ی تقریبی در هرکدام.",
+      kicker:
+        "حوزه‌هایی که در آن‌ها فعالانه کار می‌کنم، به همراه سطح تجربه‌ی تقریبی در هرکدام.",
       techEyebrow: "ابزارها",
       techTitle: "تکنولوژی‌ها",
+    },
+    credentials: {
+      eyebrow: "مدارک",
+      title: "مدارک و افتخارات",
+      kicker: "مدارک و جوایزی که در آکادمیک ها و شرکت ها گرفتم",
     },
     social: {
       eyebrow: "در ارتباط باشیم",
       title: "شبکه‌های اجتماعی",
-      kicker: "از هر کدام از این پلتفرم‌ها که راحت‌ترید، دنبالم کنید یا پیام بدهید.",
+      kicker:
+        "از هر کدام از این پلتفرم‌ها که راحت‌ترید، دنبالم کنید یا پیام بدهید.",
     },
     contact: {
       eyebrow: "در ارتباط باشیم",
@@ -76,7 +86,8 @@ export const content = {
         phone: "شماره تماس",
         phonePlaceholder: "مثلاً: 09123456789",
         message: "پیام شما",
-        messagePlaceholder: "مثلاً: سلام، برای طراحی وب‌سایت نیازمند مشاوره هستم...",
+        messagePlaceholder:
+          "مثلاً: سلام، برای طراحی وب‌سایت نیازمند مشاوره هستم...",
         submit: "ارسال پیام",
         success: "پیام شما ارسال شد — به‌زودی پاسخ می‌دهم ✓",
       },
@@ -125,32 +136,42 @@ export const content = {
     shop: {
       eyebrow: "Shop",
       title: "Shop",
-      kicker: "Full source code for a few real projects — ready to learn from, customize, or drop straight into your own business.",
+      kicker:
+        "Full source code for a few real projects — ready to learn from, customize, or drop straight into your own business.",
       cta: "Get Source Code",
     },
     projects: {
       eyebrow: "Work",
       title: "Projects & Demos",
-      kicker: "A selection of practice projects, demos and UI experiments I've built to learn and showcase my skills.",
+      kicker:
+        "A selection of practice projects, demos and UI experiments I've built to learn and showcase my skills.",
       viewDemo: "View Live Demo",
     },
     experience: {
       eyebrow: "Career Path",
       title: "Experience",
-      kicker: "A summary of my recent work, both as part of a team and freelance, newest first.",
+      kicker:
+        "A summary of my recent work, both as part of a team and freelance, newest first.",
       tabs: { all: "All", frontend: "FRONT-END", backend: "BACK-END" },
     },
     skills: {
       eyebrow: "Skills",
       title: "Technical Skills",
-      kicker: "The areas I actively work in, along with a rough sense of my experience level in each.",
+      kicker:
+        "The areas I actively work in, along with a rough sense of my experience level in each.",
       techEyebrow: "Tools",
       techTitle: "Tech Stack",
+    },
+    credentials: {
+      eyebrow: "credentials ",
+      title: "Credentials and Honors",
+      kicker: "Certificates and awards I received in academic and corporate settings.",
     },
     social: {
       eyebrow: "Let's Connect",
       title: "Social Media",
-      kicker: "Follow me or drop a message on whichever platform works best for you.",
+      kicker:
+        "Follow me or drop a message on whichever platform works best for you.",
     },
     contact: {
       eyebrow: "Let's Connect",

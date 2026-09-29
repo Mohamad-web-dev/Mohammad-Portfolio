@@ -8,6 +8,7 @@ import ExperienceSection from "./components/sections/ExperienceSection";
 import SkillsSection from "./components/sections/SkillsSection";
 import SocialSection from "./components/sections/SocialSection";
 import ContactSection from "./components/sections/ContactSection";
+import Credentials from "./components/sections/Credentials";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
       </section>
 
       <SkillsSection />
+      <Credentials />
       {/* <ShopSection /> */}
       <ProjectsSection />
       <ExperienceSection />

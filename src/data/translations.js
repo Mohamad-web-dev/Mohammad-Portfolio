@@ -52,6 +52,14 @@ export const translations = {
       en: "Areas I actively work in, with an approximate experience level in each.",
     },
   },
+  credentials: {
+    eyebrow: { fa: "مدارک", en: "credentials" },
+    title: { fa: "مدارک و افتخارات", en: "Credentials and Honors" },
+    kicker: {
+      fa: "مدارک و جوایزی که در آکادمیک ها و شرکت ها گرفتم",
+      en: "Certificates and awards I received in academic and corporate settings.",
+    },
+  },
   social: {
     eyebrow: { fa: "در ارتباط باشیم", en: "Let's Connect" },
     title: { fa: "شبکه‌های اجتماعی", en: "Social Media" },
@@ -75,14 +83,20 @@ export const translations = {
       en: "e.g. Hi, I'd like to discuss a website project...",
     },
     submit: { fa: "ارسال پیام", en: "Send Message" },
-    success: { fa: "پیام شما ارسال شد — به‌زودی پاسخ می‌دهم ✓", en: "Your message was sent — I'll reply soon ✓" },
+    success: {
+      fa: "پیام شما ارسال شد — به‌زودی پاسخ می‌دهم ✓",
+      en: "Your message was sent — I'll reply soon ✓",
+    },
     emailInfoLabel: { fa: "ایمیل", en: "Email" },
     phoneInfoLabel: { fa: "شماره تماس", en: "Phone" },
     locationInfoLabel: { fa: "موقعیت", en: "Location" },
   },
   cta: {
     collaborationEyebrow: { fa: "همکاری", en: "Collaboration" },
-    heading: { fa: "پروژه بعدی‌تان را با هم بسازیم", en: "Let's build your next project together" },
+    heading: {
+      fa: "پروژه بعدی‌تان را با هم بسازیم",
+      en: "Let's build your next project together",
+    },
     body: {
       fa: "چه یک وب‌سایت شرکتی بخواهید، چه یک اپلیکیشن کامل؛ خوشحال می‌شوم درباره‌ی ایده‌ی شما بشنوم.",
       en: "Whether it's a company website or a full application, I'd love to hear about your idea.",
@@ -101,5 +115,15 @@ export const translations = {
   },
   common: {
     langSwitchTo: { fa: "EN", en: "FA" },
+  },
+  codyadCredentials: {
+    title: {
+      fa: " مدرک پایان دوره کدیاد",
+      en: "Codyad Course Completion Certificate",
+    },
+    text: {
+      fa: " در این دوره یک پنل مدیریت حرفه‌ای برای یک فروشگاه اینترنتی را با React از صفر پیاده‌سازی می‌کنیم. در این پروژه علاوه بر طراحی رابط کاربری، بخش‌های مختلف پنل به یک Backend و API اختصاصی متصل می‌شوند و اطلاعات واقعی از سمت سرور دریافت و مدیریت خواهند شد. در طول دوره سیستم ورود و ثبت‌نام کاربران، مدیریت محصولات و دسته‌بندی‌ها، مدیریت برندها، سفارش‌ها، سبدها، کاربران، نقش‌ها، مجوزها و سایر بخش‌های موردنیاز یک فروشگاه اینترنتی را پیاده‌سازی می‌کنیم.",
+      en: "In this course, we will build a professional admin panel for an online store from scratch using React. Beyond just designing the user interface, we will connect the panel's various sections to a dedicated backend and API, enabling the retrieval and management of real server-side data. Throughout the course, we will implement features such as user login and registration, management of products, categories, and brands, as well as systems for handling orders, shopping carts, users, roles, permissions, and other essential components of an online store.",
+    },
   },
 };
